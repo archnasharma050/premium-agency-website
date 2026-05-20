@@ -68,6 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 follower.classList.remove('view-mode');
             });
         });
+
+        // Showcase Mode State: Hero Section Hover
+        const heroSection = document.getElementById('hero');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', (e) => {
+                if (!e.target.closest('a, button, .btn-magnetic')) {
+                    cursor.classList.add('hovered');
+                    follower.classList.add('showcase-mode');
+                    if (cursorText) cursorText.textContent = "VIEW SHOWCASE";
+                }
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+                follower.classList.remove('showcase-mode');
+            });
+
+            // Prevent cursor text when hovering over buttons inside hero
+            const heroButtons = heroSection.querySelectorAll('a, button');
+            heroButtons.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    follower.classList.remove('showcase-mode');
+                    follower.classList.add('hovered');
+                });
+                btn.addEventListener('mouseleave', () => {
+                    follower.classList.remove('hovered');
+                    follower.classList.add('showcase-mode');
+                    if (cursorText) cursorText.textContent = "VIEW SHOWCASE";
+                });
+            });
+        }
     }
 
     // ==========================================================================
@@ -1161,6 +1192,60 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
+
+            // Card Hover SVG Circular Score Animation
+            if (!isMobile) {
+                const fillPaths = node.querySelectorAll('.circle-fill');
+                
+                node.addEventListener('mouseenter', () => {
+                    fillPaths.forEach(path => {
+                        const targetScore = parseFloat(path.getAttribute('data-target-score'));
+                        // Spin and fill SVG circle using GSAP
+                        gsap.fromTo(path, {
+                            strokeDasharray: '0, 100'
+                        }, {
+                            strokeDasharray: `${targetScore}, 100`,
+                            duration: 1.2,
+                            ease: 'power2.out',
+                            overwrite: 'auto'
+                        });
+                        
+                        // Count up score numbers inside dials
+                        const scoreNumEl = path.closest('.score-dial-item').querySelector('.score-number');
+                        if (scoreNumEl) {
+                            const scoreVal = { val: 0 };
+                            const finalScore = targetScore / 10;
+                            gsap.fromTo(scoreVal, {
+                                val: 0
+                            }, {
+                                val: finalScore,
+                                duration: 1.2,
+                                ease: 'power2.out',
+                                onUpdate: () => {
+                                    scoreNumEl.textContent = scoreVal.val.toFixed(1);
+                                }
+                            });
+                        }
+                    });
+                });
+                
+                node.addEventListener('mouseleave', () => {
+                    fillPaths.forEach(path => {
+                        gsap.to(path, {
+                            strokeDasharray: '0, 100',
+                            duration: 0.5,
+                            ease: 'power2.inOut',
+                            overwrite: 'auto'
+                        });
+                        
+                        const scoreNumEl = path.closest('.score-dial-item').querySelector('.score-number');
+                        if (scoreNumEl) {
+                            const finalScore = parseFloat(path.getAttribute('data-target-score')) / 10;
+                            scoreNumEl.textContent = finalScore.toFixed(1);
+                        }
+                    });
+                });
+            }
         });
     }
 
@@ -1222,7 +1307,8 @@ document.addEventListener('DOMContentLoaded', () => {
             frequencies: [220, 330],
             wave: 'triangle',
             isHueFilter: false,
-            isVioletFilter: false
+            isVioletFilter: false,
+            scores: { des: 9.4, cre: 9.7, usa: 9.1, con: 9.3 }
         },
         'node-vespera': {
             title: 'VESPERA CORE',
@@ -1236,7 +1322,8 @@ document.addEventListener('DOMContentLoaded', () => {
             frequencies: [147, 294],
             wave: 'sine',
             isHueFilter: false,
-            isVioletFilter: false
+            isVioletFilter: false,
+            scores: { des: 9.2, cre: 9.4, usa: 9.6, con: 8.9 }
         },
         'node-lumen': {
             title: 'LUMEN GOLD',
@@ -1250,7 +1337,8 @@ document.addEventListener('DOMContentLoaded', () => {
             frequencies: [196, 293.66],
             wave: 'sine',
             isHueFilter: true,
-            isVioletFilter: false
+            isVioletFilter: false,
+            scores: { des: 9.6, cre: 9.2, usa: 9.0, con: 9.4 }
         },
         'node-aurora': {
             title: 'AURORA GLITCH',
@@ -1264,7 +1352,8 @@ document.addEventListener('DOMContentLoaded', () => {
             frequencies: [165, 247.5],
             wave: 'sawtooth',
             isHueFilter: false,
-            isVioletFilter: true
+            isVioletFilter: true,
+            scores: { des: 9.1, cre: 9.6, usa: 9.3, con: 9.2 }
         }
     };
 
@@ -1314,6 +1403,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (modalDescHighlight) modalDescHighlight.textContent = data.highlight;
                     if (modalDescBody) modalDescBody.textContent = data.body;
                     
+                    // Reset modal score indicators immediately
+                    const categories = ['des', 'cre', 'usa', 'con'];
+                    categories.forEach(cat => {
+                        const circle = document.getElementById(`modal-circle-${cat}`);
+                        const num = document.getElementById(`modal-val-${cat}`);
+                        if (circle) circle.setAttribute('stroke-dasharray', '0, 100');
+                        if (num) num.textContent = '0.0';
+                    });
+
                     // Make sure glitch state is cleared initially
                     sensoryModal.classList.remove('glitch-active');
                     
@@ -1321,6 +1419,43 @@ document.addEventListener('DOMContentLoaded', () => {
                     sensoryModal.classList.add('active');
                     if (lenis) lenis.stop(); // Lock main page scroll
                     
+                    // Animate scorecard rating dials inside modal
+                    if (data.scores) {
+                        categories.forEach((cat, index) => {
+                            const circle = document.getElementById(`modal-circle-${cat}`);
+                            const scoreEl = document.getElementById(`modal-val-${cat}`);
+                            const targetVal = data.scores[cat]; // e.g. 9.4
+                            
+                            if (circle && scoreEl) {
+                                // Spin & fill SVG circle using GSAP
+                                gsap.fromTo(circle, {
+                                    strokeDasharray: '0, 100'
+                                }, {
+                                    strokeDasharray: `${targetVal * 10}, 100`,
+                                    duration: 1.4,
+                                    delay: 0.35 + index * 0.1,
+                                    ease: 'power3.out',
+                                    overwrite: 'auto'
+                                });
+                                
+                                // Count up text numbers inside dials
+                                const scoreVal = { val: 0 };
+                                gsap.fromTo(scoreVal, {
+                                    val: 0
+                                }, {
+                                    val: targetVal,
+                                    duration: 1.4,
+                                    delay: 0.35 + index * 0.1,
+                                    ease: 'power3.out',
+                                    onUpdate: () => {
+                                        scoreEl.textContent = scoreVal.val.toFixed(1);
+                                    },
+                                    overwrite: 'auto'
+                                });
+                            }
+                        });
+                    }
+
                     // Play introductory luxury chord
                     playSensoryChord(data.frequencies, data.wave, 1.8);
                 }
@@ -1333,6 +1468,15 @@ document.addEventListener('DOMContentLoaded', () => {
             sensoryModal.classList.remove('glitch-active');
             if (lenis) lenis.start(); // Unlock main page scroll
             activeNodeId = null;
+
+            // Reset modal score indicators to zero on close
+            const categories = ['des', 'cre', 'usa', 'con'];
+            categories.forEach(cat => {
+                const circle = document.getElementById(`modal-circle-${cat}`);
+                const num = document.getElementById(`modal-val-${cat}`);
+                if (circle) gsap.set(circle, { strokeDasharray: '0, 100' });
+                if (num) num.textContent = '0.0';
+            });
         };
 
         if (closeSensoryBtn) closeSensoryBtn.addEventListener('click', closeSensoryModal);

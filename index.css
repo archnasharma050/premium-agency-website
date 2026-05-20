@@ -3181,3 +3181,210 @@ img, svg {
     height: 14px;
 }
 
+/* ==========================================================================
+   21. Awwwards Showcase Upgrades (Video Billboard Backdrop, Floating Showcase Cursor, Circular Scores)
+   ========================================================================== */
+.hero-video-backdrop-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.35;
+}
+
+.hero-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65) contrast(1.1) saturate(1.2);
+}
+
+.hero-video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 40%, var(--bg-primary) 100%);
+}
+
+.custom-cursor-follower.showcase-mode {
+    width: 130px;
+    height: 130px;
+    border-color: var(--text-primary);
+    background-color: var(--text-primary);
+}
+
+.custom-cursor-follower.showcase-mode .cursor-text {
+    transform: scale(1);
+    color: var(--bg-primary);
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.sensory-image-container {
+    position: relative;
+}
+
+.sensory-score-dashboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(6, 6, 6, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 15px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sensory-node-card:hover .sensory-score-dashboard {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.score-dial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.score-circle-wrapper {
+    position: relative;
+    width: 52px;
+    height: 52px;
+}
+
+.score-circle-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 2.8;
+}
+
+.circle-fill {
+    fill: none;
+    stroke: #00f0ff;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.score-dial-item:nth-child(2) .circle-fill {
+    stroke: #7000ff;
+}
+
+.score-dial-item:nth-child(3) .circle-fill {
+    stroke: #ffaa00;
+}
+
+.score-dial-item:nth-child(4) .circle-fill {
+    stroke: #ff007a;
+}
+
+.score-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-headings);
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.score-label {
+    font-size: 0.52rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-tertiary);
+}
+
+.sensory-modal-scorecard {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.scorecard-title {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sensory-modal-scores-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 380px;
+}
+
+.modal-score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-score-item .score-circle-wrapper {
+    width: 60px;
+    height: 60px;
+}
+
+.modal-score-item .score-number {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-headings);
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.modal-score-item .score-label {
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-tertiary);
+}
+
+.modal-score-item .circle-fill {
+    stroke: #00f0ff;
+}
+
+.modal-score-item:nth-child(2) .circle-fill {
+    stroke: #7000ff;
+}
+
+.modal-score-item:nth-child(3) .circle-fill {
+    stroke: #ffaa00;
+}
+
+.modal-score-item:nth-child(4) .circle-fill {
+    stroke: #ff007a;
+}
+
