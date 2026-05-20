@@ -481,6 +481,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Logo click smooth scroll to top
+    const navLogo = document.getElementById('nav-logo');
+    if (navLogo) {
+        navLogo.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (lenis) {
+                lenis.scrollTo(0, { offset: 0, duration: 1.2 });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    }
+
     // Mobile Navigation Toggle drawer mechanics
     const mobileToggle = document.getElementById('mobile-toggle');
     const mobileDrawer = document.getElementById('mobile-drawer');
