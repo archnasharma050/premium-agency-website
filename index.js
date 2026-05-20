@@ -537,15 +537,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     ease: "power2.out"
                 });
                 
-                const label = btn.querySelector('span, i');
-                if (label) {
+                const labels = btn.querySelectorAll('span, i');
+                labels.forEach(label => {
                     gsap.to(label, {
                         x: x * 0.15,
                         y: y * 0.15,
                         duration: 0.3,
                         ease: "power2.out"
                     });
-                }
+                });
             });
             
             btn.addEventListener('mouseleave', () => {
@@ -556,15 +556,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     ease: "elastic.out(1, 0.4)"
                 });
                 
-                const label = btn.querySelector('span, i');
-                if (label) {
+                const labels = btn.querySelectorAll('span, i');
+                labels.forEach(label => {
                     gsap.to(label, {
                         x: 0,
                         y: 0,
                         duration: 0.6,
                         ease: "elastic.out(1, 0.4)"
                     });
-                }
+                });
             });
         });
     }
