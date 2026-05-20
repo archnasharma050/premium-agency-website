@@ -603,13 +603,14 @@ img, svg {
    ========================================================================== */
 .hero-section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 110px 5% 40px 5%; /* Pushed down to give headroom below the fixed header */
+    padding: clamp(80px, 8vh, 110px) 5% clamp(40px, 5vh, 60px) 5%; /* Responsive padding prevents button clipping on short screens */
     box-sizing: border-box;
 }
 
@@ -641,7 +642,7 @@ img, svg {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: clamp(15px, 2.5vh, 25px);
 }
 
 .studio-badge {
@@ -671,7 +672,7 @@ img, svg {
     font-weight: 900;
     line-height: 0.92;
     letter-spacing: -0.04em;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 3vh, 30px);
     text-transform: uppercase;
 }
 
@@ -704,7 +705,7 @@ img, svg {
     font-weight: 300;
     max-width: 680px;
     color: var(--text-secondary);
-    margin-bottom: 45px;
+    margin-bottom: clamp(20px, 4vh, 45px);
     line-height: 1.55;
 }
 
