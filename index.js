@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    // 6. Sticky Navbar Scrolled State & Section Highlighting
+    // 6. Sticky Navbar Scrolled State & Section Highlighting (Hero Scroll Indicator Removed)
     // ==========================================================================
     const header = document.querySelector('.header-nav');
     const sections = document.querySelectorAll('section');

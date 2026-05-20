@@ -609,7 +609,8 @@ img, svg {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 0 5%;
+    padding: 110px 5% 40px 5%; /* Pushed down to give headroom below the fixed header */
+    box-sizing: border-box;
 }
 
 .hero-grid-bg {
@@ -768,54 +769,6 @@ img, svg {
         width: 100%;
         justify-content: center;
     }
-}
-
-.hero-scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    z-index: 3;
-    pointer-events: none;
-    opacity: 0.6;
-}
-
-.scroll-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-}
-
-.scroll-mouse {
-    width: 20px;
-    height: 32px;
-    border: 1.5px solid var(--text-secondary);
-    border-radius: 12px;
-    position: relative;
-}
-
-.scroll-wheel {
-    width: 3px;
-    height: 6px;
-    background-color: var(--text-primary);
-    border-radius: 2px;
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scrollMouseWheel 1.6s infinite ease-in-out;
-}
-
-@keyframes scrollMouseWheel {
-    0% { transform: translate(-50%, 0); opacity: 0; }
-    30% { opacity: 1; }
-    100% { transform: translate(-50%, 8px); opacity: 0; }
 }
 
 /* ==========================================================================
@@ -3499,8 +3452,8 @@ img, svg {
 }
 
 @media (max-width: 767px) {
-    .hero-scroll-indicator {
-        display: none;
+    .hero-section {
+        padding-top: 80px;
     }
     .about-section {
         padding: 55px 0;
