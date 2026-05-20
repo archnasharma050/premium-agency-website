@@ -378,12 +378,12 @@ img, svg {
     border-bottom: 1px solid var(--glass-border);
     background-color: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
-    padding: 30px 0; /* Expanded padding for elegant desktop look */
+    padding: 36px 0; /* Expanded padding for elegant desktop look */
     transition: var(--transition-fast);
 }
 
 .header-nav.scrolled {
-    padding: 16px 0; /* Expanded from 14px */
+    padding: 18px 0; /* Expanded from 16px to feel premium */
     border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -887,7 +887,7 @@ img, svg {
 
 .about-section {
     width: 100%;
-    padding: 160px 0;
+    padding: 120px 0;
     position: relative;
     z-index: 3;
 }
@@ -969,7 +969,7 @@ img, svg {
    ========================================================================== */
 .services-section {
     width: 100%;
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
     z-index: 3;
 }
@@ -1572,7 +1572,7 @@ img, svg {
    ========================================================================== */
 .stats-section {
     width: 100%;
-    padding: 100px 0;
+    padding: 20px 0;
     position: relative;
     z-index: 3;
 }
@@ -1583,7 +1583,7 @@ img, svg {
     margin: 0 auto;
     border-top: 1px solid var(--glass-border);
     border-bottom: 1px solid var(--glass-border);
-    padding: 90px 0;
+    padding: 70px 0;
 }
 
 .stats-grid {
@@ -1663,7 +1663,7 @@ img, svg {
    ========================================================================== */
 .testimonials-section {
     width: 100%;
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
     z-index: 3;
 }
@@ -1821,7 +1821,7 @@ img, svg {
    ========================================================================== */
 .faqs-section {
     width: 100%;
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
     z-index: 3;
 }
@@ -1916,7 +1916,7 @@ img, svg {
    ========================================================================== */
 .contact-section {
     width: 100%;
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
     z-index: 3;
 }
@@ -2164,7 +2164,7 @@ img, svg {
    ========================================================================== */
 .footer {
     width: 100%;
-    padding: 100px 0 40px 0;
+    padding: 80px 0 40px 0;
     position: relative;
     z-index: 3;
     background-color: #030303;
@@ -2725,7 +2725,7 @@ img, svg {
    19. Sensory Archive Kinetic Scroll Gallery Styling
    ========================================================================== */
 .sensory-section {
-    padding: 140px 0;
+    padding: 120px 0;
     position: relative;
     background-color: var(--bg-primary);
     overflow: hidden;
@@ -3470,52 +3470,70 @@ img, svg {
 */
 @media (max-width: 991px) {
     .about-section {
-        padding: 90px 0;
+        padding: 80px 0;
     }
     .services-section {
-        padding: 85px 0;
+        padding: 80px 0;
+    }
+    .projects-section {
+        padding: 80px 0;
     }
     .stats-section {
-        padding: 70px 0;
+        padding: 15px 0;
     }
     .stats-container {
         padding: 60px 0;
     }
+    .sensory-section {
+        padding: 80px 0;
+    }
     .testimonials-section {
-        padding: 85px 0;
+        padding: 80px 0;
     }
     .faqs-section {
-        padding: 85px 0;
+        padding: 80px 0;
     }
     .contact-section {
-        padding: 85px 0;
+        padding: 80px 0;
     }
 }
 
 @media (max-width: 767px) {
+    .hero-scroll-indicator {
+        display: none;
+    }
     .about-section {
-        padding: 60px 0;
+        padding: 55px 0;
     }
     .services-section {
+        padding: 50px 0;
+    }
+    .projects-section {
         padding: 55px 0;
+    }
+    .projects-horizontal-scroll {
+        gap: 45px;
     }
     .stats-section {
-        padding: 40px 0;
+        padding: 10px 0;
     }
     .stats-container {
-        padding: 30px 0;
+        padding: 40px 0;
+    }
+    .sensory-section {
+        padding: 50px 0;
     }
     .testimonials-section {
-        padding: 55px 0;
+        padding: 50px 0;
     }
     .faqs-section {
-        padding: 55px 0;
+        padding: 50px 0;
     }
     .contact-section {
-        padding: 55px 0;
+        padding: 50px 0;
     }
     .footer {
-        padding: 60px 0 30px 0;
+        padding: 50px 0 25px 0;
     }
 }
 

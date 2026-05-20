@@ -475,7 +475,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             if (targetSection && lenis) {
-                lenis.scrollTo(targetSection, { offset: -60 });
+                const scrollOffset = window.innerWidth > 991 ? -120 : -70;
+                lenis.scrollTo(targetSection, { offset: scrollOffset });
             }
         });
     });
@@ -509,7 +510,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (targetSection && lenis) {
                     setTimeout(() => {
-                        lenis.scrollTo(targetSection, { offset: -60 });
+                        const scrollOffset = window.innerWidth > 991 ? -120 : -70;
+                        lenis.scrollTo(targetSection, { offset: scrollOffset });
                     }, 500);
                 }
             });
@@ -1119,7 +1121,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection && lenis) {
                     setTimeout(() => {
-                        lenis.scrollTo(contactSection, { offset: -60 });
+                        const scrollOffset = window.innerWidth > 991 ? -120 : -70;
+                        lenis.scrollTo(contactSection, { offset: scrollOffset });
                     }, 500);
                 }
             });
