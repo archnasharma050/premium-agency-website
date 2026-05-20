@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Studio | Premium Interactive Agency & Digital Architecture</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AURA is a world-class premium creative agency crafting ultra-modern, cinematic, and luxury-level digital experiences, typography, and interactive art. Inspired by Locomotive.ca.">
+    <meta name="keywords" content="creative agency, luxury web design, cinematic web, interactive engineering, digital studio, premium agency, GSAP design">
+    <meta name="author" content="AURA Studio">
+    <meta property="og:title" content="AURA Studio | Luxury Creative Agency">
+    <meta property="og:description" content="A world-class digital production studio creating high-end cinematic web experiences.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>A</text></svg>">
+    
+    <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- 1. Analog Film Grain Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- 2. Cosmic Ambient Floating Aura Orbs -->
+    <div class="aura-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- 3. Cinematic Loading Intro Screen -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-top-meta">[ CORE PROTOCOL INITIATED ]</div>
+            
+            <!-- Flashing Luxury Concept Words -->
+            <div class="loader-word-wrapper">
+                <span class="loader-word active">GENESIS</span>
+                <span class="loader-word">CONCEPT</span>
+                <span class="loader-word">MOTION</span>
+                <span class="loader-word">SUBLIMITY</span>
+                <span class="loader-word">AURA®</span>
+            </div>
+            
+            <div class="loader-logo">AURA<span class="trademark">®</span></div>
+            
+            <div class="loader-bar-bg">
+                <div class="loader-bar"></div>
+            </div>
+            <div class="loader-progress">00%</div>
+        </div>
+    </div>
+
+    <!-- 4. Interactive Canvas Mesh Backdrop -->
+    <canvas id="canvas-backdrop"></canvas>
+    
+    <!-- 5. Elastic Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor">
+        <span class="cursor-text"></span>
+    </div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower">
+        <span class="cursor-text"></span>
+    </div>
+
+    <!-- 6. Sticky Glassmorphism Header -->
+    <header class="header-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                AURA<span class="trademark">®</span>
+            </a>
+            
+            <nav class="nav-links-wrapper">
+                <a href="#about" class="nav-link">GENESIS</a>
+                <a href="#services" class="nav-link">COMPETENCIES</a>
+                <a href="#projects" class="nav-link">CREATIONS</a>
+                <a href="#sensory" class="nav-link">SENSORY</a>
+                <a href="#faqs" class="nav-link">RESOLUTIONS</a>
+                <a href="#contact" class="nav-link">INQUIRY</a>
+            </nav>
+            
+            <div class="nav-cta-wrapper">
+                <a href="#contact" class="nav-cta btn-magnetic">
+                    <span>Initiate Contact</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="mobile-menu-drawer" id="mobile-drawer">
+            <div class="mobile-drawer-links">
+                <a href="#about" class="mobile-link">GENESIS</a>
+                <a href="#services" class="mobile-link">COMPETENCIES</a>
+                <a href="#projects" class="mobile-link">CREATIONS</a>
+                <a href="#sensory" class="mobile-link">SENSORY</a>
+                <a href="#faqs" class="mobile-link">RESOLUTIONS</a>
+                <a href="#contact" class="mobile-link">INQUIRY</a>
+                <a href="#contact" class="mobile-cta-btn">Initiate Contact <i data-lucide="arrow-up-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Smooth Scrolling Container -->
+    <main data-scroll-container id="main-content">
+
+        <!-- 7. HERO SECTION (Typographic Monument) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-grid-bg"></div>
+            <div class="hero-container">
+                <div class="hero-tagline-wrapper reveal-fade">
+                    <span class="studio-badge">[ AURA DESIGN LABS® ]</span>
+                    <span class="divider">•</span>
+                    <span class="hero-tagline">LUXURY INTERACTIVE ARCHITECTURE</span>
+                </div>
+                
+                <h1 class="hero-headline">
+                    <span class="word-wrapper"><span class="word">WE CRAFT</span></span><br>
+                    <span class="word-wrapper"><span class="word glow-text">CINEMATIC</span></span><br>
+                    <span class="word-wrapper"><span class="word outline-text">EXPERIENCES</span></span>
+                </h1>
+                
+                <p class="hero-subtitle reveal-text-slow">
+                    An elite creative studio operating globally at the crossroad of sensory design, structural aesthetic direction, and luxury web engineering. We shape voids into voices.
+                </p>
+                
+                <div class="hero-actions reveal-fade">
+                    <a href="#projects" class="btn-primary btn-magnetic" id="btn-hero-explore">
+                        <span>Explore Creations</span>
+                        <div class="btn-hover-fill"></div>
+                    </a>
+                    <button class="btn-secondary btn-magnetic" id="btn-play-showreel">
+                        <i data-lucide="play" style="width: 14px; height: 14px; margin-right: 8px; display: inline-block; vertical-align: middle;"></i>
+                        <span>Play Showreel</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span class="scroll-label">Scroll to Experience</span>
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. ABOUT SECTION (Split Screen Geometry) -->
+        <section id="about" class="about-section scroll-reveal-section">
+            <div class="about-container">
+                <div class="split-layout">
+                    <div class="split-left">
+                        <div class="section-tag">
+                            <span>01 / GENESIS</span>
+                        </div>
+                        <h2 class="large-about-heading">
+                            EVOKING EMOTION<br>THROUGH STRUCTURAL<br><span class="highlight-outline">HARMONY.</span>
+                        </h2>
+                    </div>
+                    <div class="split-right">
+                        <p class="about-paragraph highlight-text">
+                            At AURA, we believe luxury is not the presence of noise, but the absolute absence of compromise. We strip away the redundant, crafting interactive spaces that feel alive, sensory, and cinematic.
+                        </p>
+                        <p class="about-paragraph secondary-text">
+                            Inspired by the geometric precision of Swiss grids, the elegance of Apple typography, and the kinetic flow of Locomotive, our work represents a seamless synthesis of conceptual philosophy and cutting-edge engineering mechanics.
+                        </p>
+                        <div class="about-btn-wrapper">
+                            <a href="#services" class="btn-text btn-magnetic">
+                                <span>Discover Our Competencies</span>
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. SERVICES SECTION (Premium Expandable Grid) -->
+        <section id="services" class="services-section scroll-reveal-section">
+            <div class="services-container">
+                <div class="section-header-minimal">
+                    <div class="section-tag">
+                        <span>02 / COMPETENCIES</span>
+                    </div>
+                    <h2 class="section-title">Our Expert Competencies</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card btn-magnetic" id="service-01">
+                        <div class="service-border-top"></div>
+                        <div class="service-card-header">
+                            <span class="service-num">01 /</span>
+                            <h3 class="service-card-title">Brand Intelligence</h3>
+                            <i data-lucide="plus" class="service-toggle-icon"></i>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">
+                                Establishing premium, architectural identity systems. We structure strategic naming, editorial typography systems, signature style books, and distinct digital presence guidelines that resonate on a global luxury tier.
+                            </p>
+                            <ul class="service-list">
+                                <li>Identity Ecosystems</li>
+                                <li>Conceptual DNA</li>
+                                <li>Visual Positioning</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card btn-magnetic" id="service-02">
+                        <div class="service-border-top"></div>
+                        <div class="service-card-header">
+                            <span class="service-num">02 /</span>
+                            <h3 class="service-card-title">Design Architecture</h3>
+                            <i data-lucide="plus" class="service-toggle-icon"></i>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">
+                                Creating cinematic user interfaces with luxury spacing, custom grids, and fluid motion design. We compose premium layout architectures, fine-tuned typography curves, and smooth page transitions that captivate at first glance.
+                            </p>
+                            <ul class="service-list">
+                                <li>Spatial UI/UX Design</li>
+                                <li>Art & Editorial Direction</li>
+                                <li>Premium Motion Styling</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card btn-magnetic" id="service-03">
+                        <div class="service-border-top"></div>
+                        <div class="service-card-header">
+                            <span class="service-num">03 /</span>
+                            <h3 class="service-card-title">Kinetic Engineering</h3>
+                            <i data-lucide="plus" class="service-toggle-icon"></i>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">
+                                Constructing ultra-performant, high-fidelity responsive websites. Utilizing smooth inertial scrolling mechanics, precise WebGL shader backdrops, elegant hardware-accelerated animations, and instant loading workflows.
+                            </p>
+                            <ul class="service-list">
+                                <li>Creative Coding & WebGL</li>
+                                <li>Premium Front-End Systems</li>
+                                <li>Micro-Interactive Logic</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card btn-magnetic" id="service-04">
+                        <div class="service-border-top"></div>
+                        <div class="service-card-header">
+                            <span class="service-num">04 /</span>
+                            <h3 class="service-card-title">Interactive Artefacts</h3>
+                            <i data-lucide="plus" class="service-toggle-icon"></i>
+                        </div>
+                        <div class="service-card-content">
+                            <p class="service-description">
+                                Delivering fully tailor-made web creations, digital showcases, high-end commercial landing pages, and interactive 3D portfolios that capture focus and set global standards.
+                            </p>
+                            <ul class="service-list">
+                                <li>Cinematic Single Pages</li>
+                                <li>Premium Interactive Portfolios</li>
+                                <li>High-Performance Visual Art</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. FEATURED PROJECTS (Cinematic Horizontal Pinned Scroll) -->
+        <section id="projects" class="projects-section">
+            <div class="projects-pin-wrap">
+                <div class="projects-horizontal-scroll" id="projects-horizontal-scroll">
+                    
+                    <!-- Intro Slide -->
+                    <div class="project-slide intro-slide">
+                        <div class="section-tag"><span>03 / CREATIONS</span></div>
+                        <h2 class="horizontal-title">SELECTED<br>VISUAL<br><span class="outline-text">MASTERPIECES.</span></h2>
+                        <p class="horizontal-desc">
+                            A curated showcase of spatial web systems, interactive brands, and high-fidelity layouts designed to evoke sensory perfection.
+                        </p>
+                        <div class="scroll-horizontal-indicator">
+                            <span>Scroll Down to Pan Horizontal</span>
+                            <div class="slide-arrow-line">
+                                <span class="arrow-dot"></span>
+                                <i data-lucide="arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 1: Vespera OS -->
+                    <div class="project-slide project-card-slide" id="proj-vespera">
+                        <div class="project-slide-card">
+                            <div class="project-image-wrapper">
+                                <img src="vespera.png" class="project-img-asset" alt="Vespera OS AI Artwork">
+                                <div class="project-overlay"></div>
+                                
+                                <!-- Detailed Visual Mockup -->
+                                <div class="project-mockup-content">
+                                    <div class="mockup-header">
+                                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                                        <div class="mockup-url">[ CORE ARCHITECTURE ]</div>
+                                    </div>
+                                    <div class="mockup-body">
+                                        <div class="mockup-text-orbit">
+                                            <div class="mockup-luxury-text">VESPERA OS</div>
+                                        </div>
+                                        <div class="mockup-dashboard-ui">
+                                            <div class="ui-line"></div>
+                                            <div class="ui-grid">
+                                                <div class="ui-block"><span>LATENCY</span><span class="g-text">0.02ms</span></div>
+                                                <div class="ui-block"><span>BUILD</span><span class="g-text">99.8% STABLE</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-info">
+                                <div class="meta-row">
+                                    <span class="project-category">SYSTEMS ARCHITECTURE / DIGITAL UI</span>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <h3 class="project-title">VESPERA OS</h3>
+                                <div class="project-link-trigger">
+                                    <span>Explore Case</span>
+                                    <i data-lucide="arrow-up-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Ethera -->
+                    <div class="project-slide project-card-slide" id="proj-ethera">
+                        <div class="project-slide-card">
+                            <div class="project-image-wrapper">
+                                <img src="ethera.png" class="project-img-asset" alt="Ethera Fragrance AI Artwork">
+                                <div class="project-overlay"></div>
+                                
+                                <!-- Detailed Visual Mockup -->
+                                <div class="project-mockup-content">
+                                    <div class="mockup-header">
+                                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                                        <div class="mockup-url">[ SPATIAL ESSENCE ]</div>
+                                    </div>
+                                    <div class="mockup-body">
+                                        <div class="mockup-circular-art">
+                                            <div class="orb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-info">
+                                <div class="meta-row">
+                                    <span class="project-category">SPATIAL BRANDING / E-COMMERCE</span>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <h3 class="project-title">ETHERA INHALATION</h3>
+                                <div class="project-link-trigger">
+                                    <span>Explore Case</span>
+                                    <i data-lucide="arrow-up-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Lumen -->
+                    <div class="project-slide project-card-slide" id="proj-lumen">
+                        <div class="project-slide-card">
+                            <div class="project-image-wrapper">
+                                <img src="lumen.png" class="project-img-asset lumen-hue-filter" alt="Lumen Architectural AI Artwork">
+                                <div class="project-overlay"></div>
+                                
+                                <!-- Detailed Visual Mockup -->
+                                <div class="project-mockup-content">
+                                    <div class="mockup-header">
+                                        <div class="mockup-dots"><span></span><span></span><span></span></div>
+                                        <div class="mockup-url">[ GEOMETRIC HARMONY ]</div>
+                                    </div>
+                                    <div class="mockup-body">
+                                        <div class="mockup-architectural-lines">
+                                            <div class="line-v"></div>
+                                            <div class="line-h"></div>
+                                            <div class="lumen-logo">LUMEN™</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-info">
+                                <div class="meta-row">
+                                    <span class="project-category">MINIMALIST COMMERCE / EDITORIAL</span>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <h3 class="project-title">LUMEN ARCHITECTURAL</h3>
+                                <div class="project-link-trigger">
+                                    <span>Explore Case</span>
+                                    <i data-lucide="arrow-up-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. STATS SECTION (Scoreboard System) -->
+        <section id="stats" class="stats-section scroll-reveal-section">
+            <div class="stats-container">
+                <div class="stats-grid">
+                    <!-- Stat 1 -->
+                    <div class="stat-item" id="stat-01">
+                        <div class="stat-val-wrapper">
+                            <span class="stat-number" data-target="12">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <p class="stat-label">International Design Awards</p>
+                        <div class="stat-bar-decor"></div>
+                    </div>
+                    
+                    <!-- Stat 2 -->
+                    <div class="stat-item" id="stat-02">
+                        <div class="stat-val-wrapper">
+                            <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+                        </div>
+                        <p class="stat-label">Client Net Promoter Score</p>
+                        <div class="stat-bar-decor"></div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-item" id="stat-03">
+                        <div class="stat-val-wrapper">
+                            <span class="stat-number" data-target="40">0</span><span class="stat-suffix">M+</span>
+                        </div>
+                        <p class="stat-label">Dynamic Scroll Interactions Served</p>
+                        <div class="stat-bar-decor"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. SENSORY ARCHIVE (Scroll-to-Reveal Asymmetric Gallery & Click-to-Open Content Terminal) -->
+        <section id="sensory" class="sensory-section">
+            <div class="sensory-container">
+                <div class="section-header-minimal">
+                    <div class="section-tag">
+                        <span>04 / SENSORY ARCHIVE</span>
+                    </div>
+                    <h2 class="section-title">Kinetic Scroll Gallery</h2>
+                    <p class="section-subtitle-minimal">
+                        As you scroll, visual nodes materialize. Click any node to open its digital sensory content overlay.
+                    </p>
+                </div>
+
+                <div class="sensory-grid">
+                    <!-- Node 1: Ethera Fluid Inhalation -->
+                    <div class="sensory-node-card btn-magnetic" data-sensory-id="node-ethera">
+                        <div class="sensory-card-inner">
+                            <div class="sensory-image-container">
+                                <img src="ethera.png" class="sensory-img" alt="Ethera Fluid Membrane">
+                                <div class="sensory-card-glow" style="background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, transparent 70%);"></div>
+                            </div>
+                            <div class="sensory-card-meta">
+                                <div class="sensory-badge">[ MEMBRANE PROTOCOL ]</div>
+                                <h3 class="sensory-card-title">ETHERA FLUID</h3>
+                                <div class="sensory-click-action">
+                                    <span>REVEAL SENSORY INTENT</span>
+                                    <i data-lucide="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Node 2: Vespera Spatial Dashboard -->
+                    <div class="sensory-node-card btn-magnetic" data-sensory-id="node-vespera">
+                        <div class="sensory-card-inner">
+                            <div class="sensory-image-container">
+                                <img src="vespera.png" class="sensory-img" alt="Vespera Velvet System">
+                                <div class="sensory-card-glow" style="background: radial-gradient(circle, rgba(112, 0, 255, 0.15) 0%, transparent 70%);"></div>
+                            </div>
+                            <div class="sensory-card-meta">
+                                <div class="sensory-badge">[ TELEMETRY NODE ]</div>
+                                <h3 class="sensory-card-title">VESPERA CORE</h3>
+                                <div class="sensory-click-action">
+                                    <span>REVEAL SENSORY INTENT</span>
+                                    <i data-lucide="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Node 3: Lumen Golden Architecture -->
+                    <div class="sensory-node-card btn-magnetic" data-sensory-id="node-lumen">
+                        <div class="sensory-card-inner">
+                            <div class="sensory-image-container">
+                                <img src="lumen.png" class="sensory-img lumen-hue-filter" alt="Lumen Gold Refract">
+                                <div class="sensory-card-glow" style="background: radial-gradient(circle, rgba(255, 170, 0, 0.15) 0%, transparent 70%);"></div>
+                            </div>
+                            <div class="sensory-card-meta">
+                                <div class="sensory-badge">[ ARCHITECTURAL GEOMETRY ]</div>
+                                <h3 class="sensory-card-title">LUMEN GOLD</h3>
+                                <div class="sensory-click-action">
+                                    <span>REVEAL SENSORY INTENT</span>
+                                    <i data-lucide="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Node 4: Cosmic Aura Synthesis -->
+                    <div class="sensory-node-card btn-magnetic" data-sensory-id="node-aurora">
+                        <div class="sensory-card-inner">
+                            <div class="sensory-image-container">
+                                <img src="vespera.png" class="sensory-img aurora-violet-filter" alt="AURA Cosmic Spark">
+                                <div class="sensory-card-glow" style="background: radial-gradient(circle, rgba(255, 0, 122, 0.15) 0%, transparent 70%);"></div>
+                            </div>
+                            <div class="sensory-card-meta">
+                                <div class="sensory-badge">[ COSMIC MATRIX ]</div>
+                                <h3 class="sensory-card-title">AURORA GLITCH</h3>
+                                <div class="sensory-click-action">
+                                    <span>REVEAL SENSORY INTENT</span>
+                                    <i data-lucide="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. TESTIMONIALS (Minimal slider with Progress) -->
+        <section id="testimonials" class="testimonials-section scroll-reveal-section">
+            <div class="testimonials-container">
+                <div class="section-header-minimal">
+                    <div class="section-tag">
+                        <span>04 / TESTIMONIALS</span>
+                    </div>
+                    <h2 class="section-title">Endorsements from the Elite</h2>
+                </div>
+
+                <div class="slider-outer-wrapper">
+                    <div class="testimonial-slider" id="testimonial-slider">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-body">
+                                "AURA revolutionized our global digital framework. Their attention to minor motion metrics and minimal design system elements created an experience that has set a new benchmark for luxury ecommerce platforms."
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="author-name">Maximilian Vesper</span>
+                                <span class="author-role">Director of Digital, VESPERA Corp</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-body">
+                                "Working with AURA was a masterclass in frontend execution. They didn't just build a site; they crafted a seamless cinematic journey that evokes emotion exactly where it needs to."
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="author-name">Helene de Lune</span>
+                                <span class="author-role">Founder, LUMEN Architectural</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-body">
+                                "Their capability to blend aesthetic art direction with performant code is unparalleled. The smooth scroll feels premium, and the overall pixel alignment makes it look like an international museum gallery."
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="author-name">Julian Vance</span>
+                                <span class="author-role">Creative Lead, ETHERA Fragrance Group</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide Progress Bar Indicator -->
+                    <div class="slider-nav-bar">
+                        <div class="slider-progress-track">
+                            <div class="slider-progress-fill" id="slider-progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="slider-btn btn-magnetic" id="btn-prev-slide" aria-label="Previous Slide">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="slider-dots" id="slider-dots">
+                            <span class="slider-dot active"></span>
+                            <span class="slider-dot"></span>
+                            <span class="slider-dot"></span>
+                        </div>
+                        <button class="slider-btn btn-magnetic" id="btn-next-slide" aria-label="Next Slide">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. FAQ SECTION -->
+        <section id="faqs" class="faqs-section scroll-reveal-section">
+            <div class="faqs-container">
+                <div class="section-header-minimal">
+                    <div class="section-tag">
+                        <span>05 / RESOLUTIONS</span>
+                    </div>
+                    <h2 class="section-title">Frequently Answered Queries</h2>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item" id="faq-01">
+                        <button class="faq-header" id="faq-btn-01">
+                            <span>How does AURA engage with international brands?</span>
+                            <span class="faq-icon"><span class="icon-line line-h"></span><span class="icon-line line-v"></span></span>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-content">
+                                We work globally using high-fidelity spatial design files, remote real-time walkthroughs, and agile sprint deliveries. We synchronize with your in-house teams via secure channels and maintain a high-level feedback loop, ensuring absolute alignment on every design token and transition detail.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item" id="faq-02">
+                        <button class="faq-header" id="faq-btn-02">
+                            <span>What is your typical production and engineering timeline?</span>
+                            <span class="faq-icon"><span class="icon-line line-h"></span><span class="icon-line line-v"></span></span>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-content">
+                                A premium single-page showcase takes between 4 to 6 weeks from strategy genesis to final polish. Comprehensive design system setups, bespoke multi-page cinematic environments, or highly complex WebGL applications can span 8 to 12 weeks of micro-focused design and frontend engineering.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item" id="faq-03">
+                        <button class="faq-header" id="faq-btn-03">
+                            <span>Do you provide post-launch optimization and maintenance?</span>
+                            <span class="faq-icon"><span class="icon-line line-h"></span><span class="icon-line line-v"></span></span>
+                        </button>
+                        <div class="faq-body">
+                            <div class="faq-content">
+                                Yes. Every creation includes a 3-month comprehensive warranty and optimization support. We offer annual maintenance plans to update core libraries (e.g. GSAP, Lenis), monitor server performance, execute high-end asset swaps, and continuously verify responsive parameters across new device updates.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 14. CONTACT SECTION -->
+        <section id="contact" class="contact-section scroll-reveal-section">
+            <div class="contact-container">
+                <div class="split-layout">
+                    <div class="split-left">
+                        <div class="section-tag">
+                            <span>06 / INQUIRY</span>
+                        </div>
+                        <h2 class="contact-headline">
+                            INITIATE A DIGITAL<br>EVOLUTION. LET US<br><span class="highlight-outline">CONSTRUCT.</span>
+                        </h2>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <span class="detail-label">INQUIRY PATHWAYS</span>
+                                <a href="mailto:genesis@aura.studio" class="detail-value text-link">genesis@aura.studio</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-label">STRATEGIC HUB</span>
+                                <span class="detail-value">Geneva, Switzerland & Montreal, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="split-right">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="form-name" class="form-input" required placeholder=" ">
+                                <label for="form-name" class="form-label">YOUR MONIKER / BRAND NAME</label>
+                                <span class="input-line"></span>
+                                <span class="error-msg">Please specify your moniker.</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="form-email" class="form-input" required placeholder=" ">
+                                <label for="form-email" class="form-label">YOUR ELECTRONIC EMAIL</label>
+                                <span class="input-line"></span>
+                                <span class="error-msg">Please provide a valid electronic email.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="form-message" class="form-input text-area" required placeholder=" " rows="4"></textarea>
+                                <label for="form-message" class="form-label">OUTLINE OF DESIGN INTENT / SCOPE</label>
+                                <span class="input-line"></span>
+                                <span class="error-msg">Please outline your design intent.</span>
+                            </div>
+
+                            <div class="form-submit-wrapper">
+                                <button type="submit" class="btn-submit btn-magnetic" id="btn-form-submit">
+                                    <span>Transmit Brief</span>
+                                    <div class="btn-hover-fill"></div>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="form-success-overlay" id="form-success">
+                            <div class="success-message">
+                                <i data-lucide="check" class="success-check-icon"></i>
+                                <h3>Brief Successfully Transmitted</h3>
+                                <p>Our executive director of digital crafts will analyze your request and reply in exactly 24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 15. FOOTER -->
+        <footer class="footer scroll-reveal-section">
+            <div class="footer-container">
+                <div class="footer-main-watermark">
+                    <span class="giant-watermark">AURA</span>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-grid-col">
+                        <span class="footer-col-title">NAVIGATION</span>
+                        <a href="#about" class="footer-link">GENESIS</a>
+                        <a href="#services" class="footer-link">COMPETENCIES</a>
+                        <a href="#projects" class="footer-link">CREATIONS</a>
+                        <a href="#sensory" class="footer-link">SENSORY</a>
+                        <a href="#contact" class="footer-link">INQUIRY</a>
+                    </div>
+                    
+                    <div class="footer-grid-col">
+                        <span class="footer-col-title">CHANNELS</span>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-link text-link">INSTAGRAM <i data-lucide="arrow-up-right"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-link text-link">LINKEDIN <i data-lucide="arrow-up-right"></i></a>
+                        <a href="https://behance.net" target="_blank" rel="noopener" class="footer-link text-link">BEHANCE <i data-lucide="arrow-up-right"></i></a>
+                        <a href="https://dribbble.com" target="_blank" rel="noopener" class="footer-link text-link">DRIBBBLE <i data-lucide="arrow-up-right"></i></a>
+                    </div>
+
+                    <div class="footer-grid-col footer-col-meta">
+                        <span class="footer-col-title">EPILOGUE</span>
+                        <p class="footer-meta-p">Designed and engineered to evoke perfection. All systems operational. 2026 AURA® Studio.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom-bar">
+                    <span class="footer-copyright">© 2026 AURA® STUDIO. ESTABLISHED IN CREATIVE CODES. ALL RIGHTS RESERVED.</span>
+                    <span class="footer-legal">TERMS OF USE / PRIVACY PROTOCOL</span>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Cinematic Project Case Details Drawer Modal -->
+    <div id="case-drawer" class="case-drawer">
+        <div class="drawer-backdrop" id="case-drawer-backdrop"></div>
+        <div class="drawer-container">
+            <button class="btn-close-drawer btn-magnetic" id="btn-close-drawer" aria-label="Close Case">
+                <i data-lucide="arrow-left" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;"></i>
+                <span>CLOSE CASE</span>
+            </button>
+            <div class="drawer-scroll-content">
+                <div class="drawer-hero-banner">
+                    <img id="drawer-hero-img" src="" alt="Case Artwork">
+                    <div class="drawer-hero-overlay"></div>
+                    <div class="drawer-hero-title-wrap">
+                        <span id="drawer-case-category" class="drawer-meta-tag"></span>
+                        <h2 id="drawer-case-title" class="drawer-main-title"></h2>
+                    </div>
+                </div>
+                <div class="drawer-body-grid">
+                    <div class="drawer-col-sidebar">
+                        <div class="sidebar-meta-block">
+                            <span class="meta-label">CHRONOLOGY</span>
+                            <span id="drawer-case-year" class="meta-val"></span>
+                        </div>
+                        <div class="sidebar-meta-block">
+                            <span class="meta-label">CLIENT MONIKER</span>
+                            <span id="drawer-case-client" class="meta-val"></span>
+                        </div>
+                        <div class="sidebar-meta-block">
+                            <span class="meta-label">COMPETENCIES</span>
+                            <span id="drawer-case-specs" class="meta-val"></span>
+                        </div>
+                    </div>
+                    <div class="drawer-col-main">
+                        <h4 class="drawer-body-subtitle">GENESIS &amp; DIRECTION</h4>
+                        <p id="drawer-case-desc1" class="drawer-body-p highlight"></p>
+                        
+                        <h4 class="drawer-body-subtitle">ENGINEERING PROTOCOLS</h4>
+                        <p id="drawer-case-desc2" class="drawer-body-p"></p>
+                        
+                        <div class="drawer-body-telemetry">
+                            <div class="telemetry-item">
+                                <span class="tel-label">LUMINOUS LATENCY</span>
+                                <span class="tel-val">0.02ms</span>
+                            </div>
+                            <div class="telemetry-item">
+                                <span class="tel-label">FPS PERFORMANCE</span>
+                                <span class="tel-val">120 FPS</span>
+                            </div>
+                            <div class="telemetry-item">
+                                <span class="tel-label">SYSTEM RESPONSIVENESS</span>
+                                <span class="tel-val">100% STABLE</span>
+                            </div>
+                        </div>
+                        
+                        <div class="drawer-action-block">
+                            <button class="btn-primary btn-magnetic" id="btn-drawer-cta">
+                                <span>COMMISSION SIMILAR SYSTEM</span>
+                                <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin-left: 8px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cinematic Video Showreel Theater Modal -->
+    <div id="showreel-theater" class="showreel-theater">
+        <div class="theater-backdrop"></div>
+        <div class="theater-container">
+            <button class="btn-close-theater btn-magnetic" id="btn-close-theater" aria-label="Close Theater">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="video-frame-wrapper">
+                <video id="showreel-video" class="showreel-video" loop playsinline preload="auto">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-liquid-fluid-art-flowing-glowing-paint-42861-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls-overlay">
+                    <button class="btn-video-control" id="btn-video-mute" aria-label="Mute Video">
+                        <i data-lucide="volume-2" id="mute-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cinematic Sensory Detail Terminal Modal -->
+    <div id="sensory-modal" class="sensory-modal">
+        <div class="sensory-modal-backdrop" id="sensory-modal-backdrop"></div>
+        <div class="sensory-modal-container">
+            <!-- Close Button -->
+            <button class="btn-close-sensory btn-magnetic" id="btn-close-sensory" aria-label="Close Sensory Panel">
+                <i data-lucide="x"></i>
+            </button>
+
+            <div class="sensory-modal-scroll">
+                <div class="sensory-modal-grid">
+                    <!-- Left Column: Visual Media and Hardware Stats -->
+                    <div class="sensory-modal-visual">
+                        <div class="sensory-modal-image-wrap">
+                            <img id="sensory-modal-img" src="" alt="Sensory Detail Artwork">
+                            <div class="sensory-modal-glow"></div>
+                            <div class="sensory-glitch-overlay"></div>
+                        </div>
+                        
+                        <!-- Integrated WebGL-style Video Loop Frame -->
+                        <div class="sensory-video-frame">
+                            <div class="frame-tag">[ HIGH-FIDELITY KINETIC STREAM ]</div>
+                            <video id="sensory-inner-video" class="sensory-inner-video" loop muted playsinline autoplay>
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-liquid-fluid-art-flowing-glowing-paint-42861-large.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Rich Interactive Copy & Controls -->
+                    <div class="sensory-modal-info">
+                        <div class="sensory-modal-header">
+                            <span id="sensory-modal-badge" class="sensory-modal-badge-txt"></span>
+                            <h2 id="sensory-modal-title" class="sensory-modal-main-title"></h2>
+                        </div>
+
+                        <div class="sensory-modal-specs">
+                            <div class="spec-grid-item">
+                                <span class="spec-lbl">INTERACTION INTENSITY</span>
+                                <span id="sensory-modal-spec-intensity" class="spec-val">120 FPS ELASTICITY</span>
+                            </div>
+                            <div class="spec-grid-item">
+                                <span class="spec-lbl">AUDIO FEEDBACK</span>
+                                <span id="sensory-modal-spec-audio" class="spec-val">SYNTHESIZED AMBIENT</span>
+                            </div>
+                            <div class="spec-grid-item">
+                                <span class="spec-lbl">LATENCY DEPTH</span>
+                                <span class="spec-val">0.01ms PROTOCOL</span>
+                            </div>
+                        </div>
+
+                        <div class="sensory-modal-desc">
+                            <p id="sensory-modal-desc-highlight" class="desc-highlight"></p>
+                            <p id="sensory-modal-desc-body" class="desc-body"></p>
+                        </div>
+
+                        <!-- Luxury Micro-Interaction: Glitch Mode Controls -->
+                        <div class="sensory-glitch-controls">
+                            <h4 class="controls-title">INTERACTIVE MODULATIONS</h4>
+                            <div class="controls-row">
+                                <button class="btn-primary btn-magnetic" id="btn-glitch-mode">
+                                    <span>Trigger Glitch Shift</span>
+                                    <i data-lucide="zap"></i>
+                                </button>
+                                <button class="btn-secondary btn-magnetic" id="btn-sensory-audio-toggle">
+                                    <span>Play Sensory Tone</span>
+                                    <i data-lucide="volume-2" id="sensory-audio-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 16. JS Core and CDNs -->
+    <!-- GSAP for core animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger for scroll-based animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis for smooth scroll integration -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom JavaScript -->
+    <script type="module" src="index.js"></script>
+
+</body>
+</html>
